@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Creating a dynamic &amp; animated list</title>
+    </head>
+    <body>
+        <div id='app'>
+            <ul>
+                <li v-for='n in countdown'>{{n}}</li>
+                <li>Launch Missile!</li>
+            </ul>
+        
+        </div>
+        <script src="https://unpkg.com/vue/dist/vue.js"></script>
+        <script>
+            var vm = new Vue({
+                el: '#app', 
+                data: {
+                    countdown: []
+                }
+            })
+            var counter = 10
+            setInterval(function(){
+                if(counter > 0){
+                    vm.countdown.push(counter--)
+                }
+            }, 1000)
+        </script>
+    </body>
+</html>
