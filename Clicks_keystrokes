@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Clicks &amp; keystrokes</title>
+    </head>
+    <body>
+        <div id='app'>
+            <button v-on:click='toast'>Toast bread</button>
+        </div>
+        <script src="https://unpkg.com/vue/dist/vue.js"></script>
+        <script>
+            var vm = new Vue({
+                el: '#app', 
+                methods: {
+                    toast() {
+                        alert('Toasted🍞')
+                    }
+                }
+            })
+            
+        </script>
+    </body>
+</html>
