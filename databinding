@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Two-way data binding</title>
+    </head>
+    <body>
+        <div id='app'>
+            <button v-on:click='toast'>Toast bread</button>
+            <input v-model='toastedBreads'>
+            Quantity to put in the oven: {{toastedBreads}}
+        </div>
+        <script src="https://unpkg.com/vue/dist/vue.js"></script>
+        <script>
+            new Vue({
+                el: '#app', 
+                methods: {
+                    toast() {
+                        this.toastedBreads++
+                    }
+                }, 
+                data: {
+                    toastedBreads: 0
+                }
+            })
+        </script>
+    </body>
+</html>
