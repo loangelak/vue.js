@@ -10,7 +10,6 @@
                 <li v-for='n in countdown'>{{n}}</li>
                 <li>Launch Missile!</li>
             </ul>
-        
         </div>
         <script src="https://unpkg.com/vue/dist/vue.js"></script>
         <script>
